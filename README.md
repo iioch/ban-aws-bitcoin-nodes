@@ -1,2 +1,2 @@
-# ban-aws-bitcoin-nodes
-Script to ban Amazon Web Services ip ranges
+# Ban AWS
+Script to ban Amazon Web Services IP Ranges
