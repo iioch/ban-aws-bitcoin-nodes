@@ -5,7 +5,9 @@ command -v jq >/dev/null 2>&1 || { echo >&2 "Please install \"jq\" first. Aborti
 
 # Adjust if necessary
 IP_RANGES_FILE='/tmp/amazon-ip-ranges.json'
+# If you use non standard directories adjust this value or add -conf=/PATHtoYOURconf/bitcoin.conf -datadir=/PATHtoYOURdatadir/"
 CLIENT=/usr/local/bin/bitcoin-cli
+
 
 # Ban Time in seconds, 2592000 = 30 days
 BAN_TIME="2592000"
