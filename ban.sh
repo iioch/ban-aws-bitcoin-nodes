@@ -3,11 +3,12 @@
 # This checks if you have jq installed
 command -v jq >/dev/null 2>&1 || { echo >&2 "Please install \"jq\" first. Aborting."; exit 1; }
 
-# Adjust if necessary
-IP_RANGES_FILE='/tmp/amazon-ip-ranges.json'
-# If you use non standard directories adjust this value or add -conf=/PATHtoYOURconf/bitcoin.conf -datadir=/PATHtoYOURdatadir/"
-CLIENT=/usr/local/bin/bitcoin-cli
+# Temp file
+IP_RANGES_FILE="`mktemp /tmp/amazon-ip-ranges.XXXXXXXXXX`"
 
+# Adjust CLIENT variable so it calls bitcoin-cli with the right parameters
+# Non standart installations need to add -conf=/PATHtoYOUR/bitcoin.conf -datadir=/PATH/to/YOUR/Datadir/
+CLIENT=/usr/local/bin/bitcoin-cli
 
 # Ban Time in seconds, 2592000 = 30 days
 BAN_TIME="2592000"
