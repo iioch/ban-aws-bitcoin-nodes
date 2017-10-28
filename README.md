@@ -4,9 +4,16 @@ Protect your node's ressources from VPS nodes.
 
 The list of AWS IP ranges is obtained from http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html
 
-You need `jq` to parse the json. 
+## Requirements for the bash script (ban.sh)
 
-Download the script:
+### Command-line JSON processor jq.
+
+Install on Debian-based Linux
+```` 
+sudo apt-get install jq
+```` 
+
+## Download and use the script
 
 `git clone https://github.com/iioch/ban-aws-bitcoin-nodes.git`
 
@@ -18,13 +25,13 @@ chmod u+x ban.sh
 ./ban.sh
 ````
 
-To view banned IP addresses:
+### To view banned IP addresses:
 
 ````
 bitcoin-cli listbanned
 ````
 
-To clear banned IP addresses:
+### To clear banned IP addresses:
 
 ````
 bitcoin-cli clearbanned
